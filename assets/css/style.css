@@ -221,6 +221,7 @@ input[type="month"].vstup { color-scheme: light; }
   padding-bottom: var(--m-md);
   font-size: var(--text-sm); color: var(--text-tlmeny);
 }
+.obdobie-lista:empty { display: none; }
 .obdobie-chip {
   background: var(--karta); border: 1px solid var(--ciara);
   border-radius: var(--r-plny);

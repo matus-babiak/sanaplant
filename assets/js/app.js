@@ -797,10 +797,9 @@
       aEl.classList.toggle("aktivny", aEl.dataset.page === stav.stranka));
     $("#titulok-stranky").textContent = NAZVY_STRANOK[stav.stranka] || "Prehľad";
 
-    // lišta s obdobím
+    // lišta s porovnávaným obdobím (zobrazí sa len pri zapnutom porovnaní)
     const lista = $("#obdobie-lista");
     lista.innerHTML = "";
-    lista.appendChild(el("span", "obdobie-chip", `Obdobie: <strong>${SP.formatRozsah(mesiace)}</strong>`));
     if (cmpMesiace) lista.appendChild(el("span", "obdobie-chip porovnanie",
       `Porovnávané s: <strong>${SP.formatRozsah(cmpMesiace)}</strong>`));
 
