@@ -167,7 +167,7 @@
       const tr = el("tr");
       stlpce.forEach((s, i) => {
         const th = el("th", sortK === s.k ? "zoradene" : "");
-        if (mobilnyNazov && i === 0) th.classList.add("skry-mobil");
+        if ((mobilnyNazov && i === 0) || s.skryMobil) th.classList.add("skry-mobil");
         th.innerHTML = s.label + (sortK === s.k ? ` <span class="smer">${sortSmer < 0 ? "▼" : "▲"}</span>` : "");
         th.addEventListener("click", () => {
           if (sortK === s.k) sortSmer *= -1; else { sortK = s.k; sortSmer = s.text ? 1 : -1; }
@@ -190,12 +190,13 @@
 
       const tbody = el("tbody");
       for (const r of data) {
-        if (mobilnyNazov) tbody.appendChild(nazovRiadok(r[stlpce[0].k]));
+        if (mobilnyNazov) tbody.appendChild(nazovRiadok(
+          typeof mobilnyNazov === "function" ? mobilnyNazov(r) : r[stlpce[0].k]));
         const tr = el("tr");
         stlpce.forEach((s, i) => {
           const td = el("td", s.text ? "bunka-text" : "");
           if (s.trieda) td.classList.add(s.trieda);
-          if (mobilnyNazov && i === 0) td.classList.add("skry-mobil");
+          if ((mobilnyNazov && i === 0) || s.skryMobil) td.classList.add("skry-mobil");
           const v = r[s.k];
           td.innerHTML = s.render ? s.render(v, r) : (s.fmt ? s.fmt(v) : v);
           if (s.title) td.title = s.title(v, r);
@@ -212,7 +213,7 @@
         stlpce.forEach((s, i) => {
           const td = el("td", s.text ? "bunka-text" : "");
           if (s.trieda) td.classList.add(s.trieda);
-          if (mobilnyNazov && i === 0) td.classList.add("skry-mobil");
+          if ((mobilnyNazov && i === 0) || s.skryMobil) td.classList.add("skry-mobil");
           if (i === 0) td.textContent = "Spolu";
           else if (sucet[s.k] != null) td.innerHTML = s.fmt ? s.fmt(sucet[s.k]) : sucet[s.k];
           tr.appendChild(td);
@@ -876,7 +877,7 @@
       tabObal.appendChild(tabulka({
         stlpce: [
           { k: "ad", label: "Reklama", text: true },
-          { k: "campaign", label: "Kampaň", text: true },
+          { k: "campaign", label: "Kampaň", text: true, skryMobil: true },
           { k: "status", label: "Stav", text: true, render: v => {
               const s = SP.STAV_META[v] || { text: v || "—", trieda: "neaktivna" };
               return `<span class="stav-chip ${s.trieda}">${s.text}</span>`;
@@ -895,7 +896,7 @@
         ],
         riadky,
         uvodneZoradenie: "spend",
-        mobilnyNazov: true
+        mobilnyNazov: r => `<strong>${r.ad}</strong> <span class="m-nazov-kampan">(${r.campaign})</span>`
       }));
     }
     filter.addEventListener("change", kresliReklamy);

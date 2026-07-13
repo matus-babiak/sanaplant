@@ -486,13 +486,14 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
     border-radius: var(--r-sm);
     padding: var(--m-xs) var(--m-sm);
   }
-  .tabulka td.m-nazov span {
+  .tabulka td.m-nazov > span {
     position: sticky; left: 0;
     display: inline-block;
     max-width: calc(100vw - 4rem);
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     vertical-align: bottom;
   }
+  .m-nazov .m-nazov-kampan { font-weight: 500; font-size: var(--text-sm); color: var(--text-tlmeny); }
   .tabulka tbody tr:hover td.m-nazov { background: var(--primar-jemny); }
 
   /* bilancia: tri riadky pod sebou namiesto stĺpcov */
