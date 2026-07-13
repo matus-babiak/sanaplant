@@ -339,6 +339,19 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
 .stat-riadok .hodnota { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .stat-riadok .kpi-delta { font-size: var(--text-sm); }
 
+/* ── bilancia, upozornenia, tok peňazí ──────────────────── */
+.bilancia-mriezka { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--m-md); }
+.bil-hodnota { font-size: var(--nadpis-xl); font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.bilancia-veta { margin-top: var(--m-sm); color: var(--text-tlmeny); font-size: var(--text-sm); }
+.bilancia-veta strong { color: var(--text); }
+
+.zoznam-viet { list-style: none; display: flex; flex-direction: column; gap: var(--m-xs); }
+.zoznam-viet li { position: relative; padding-left: 1.5em; }
+.zoznam-viet li::before { content: "→"; position: absolute; left: 0; color: var(--primar); font-weight: 700; }
+
+.vlajky { border-color: rgba(240, 130, 3, .45); background: rgba(240, 130, 3, .08); }
+.vlajky .zoznam-viet li::before { content: "⚠"; color: var(--plod); }
+
 /* ── komentár ───────────────────────────────────────────── */
 .komentar { background: var(--primar-jemny); border: 1px solid transparent; }
 .komentar .karta-hlavicka { margin-bottom: var(--m-sm); }
@@ -481,6 +494,11 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
     vertical-align: bottom;
   }
   .tabulka tbody tr:hover td.m-nazov { background: var(--primar); }
+
+  /* bilancia: tri riadky pod sebou namiesto stĺpcov */
+  .bilancia-mriezka { grid-template-columns: 1fr; gap: var(--m-xs); }
+  .bil-polozka { display: flex; justify-content: space-between; align-items: baseline; gap: var(--m-sm); }
+  .bil-hodnota { font-size: var(--nadpis-md); }
 
   /* lievik: popis nad pruhom namiesto stĺpca vľavo */
   .lievik-krok { grid-template-columns: 1fr; gap: var(--m-xxs); }

@@ -429,6 +429,96 @@
     return karta;
   }
 
+  /* ══════════ bilancia, upozornenia, tok peňazí ══════════ */
+  function kartaBilancie(spend, value) {
+    const karta = el("div", "karta bilancia");
+    karta.appendChild(el("div", "karta-hlavicka",
+      "<h2>Bilancia obdobia</h2><span class='karta-pozn'>koľko išlo dnu a koľko sa vrátilo</span>"));
+    const cisty = value - spend;
+    const m = el("div", "bilancia-mriezka");
+    m.appendChild(bilPolozka("Investícia do reklamy", SP.fmt.mena(spend), "vydaj"));
+    m.appendChild(bilPolozka("Obrat z reklám", SP.fmt.mena(value), "prijem"));
+    m.appendChild(bilPolozka("Čistý efekt", (cisty >= 0 ? "+" : "−") + SP.fmt.mena(Math.abs(cisty)),
+      cisty >= 0 ? "prijem" : "vydaj"));
+    karta.appendChild(m);
+    if (spend > 0 && value > 0)
+      karta.appendChild(el("p", "bilancia-veta",
+        `Z každého 1 € vloženého do reklamy sa vrátilo <strong>${SP.fmt.mena(SP.div(value, spend))}</strong>.`));
+    return karta;
+  }
+  function bilPolozka(label, hodnota, trieda) {
+    const d = el("div", "bil-polozka");
+    d.appendChild(el("div", "kpi-label", label));
+    d.appendChild(el("div", "bil-hodnota " + trieda, hodnota));
+    return d;
+  }
+
+  const MIN_UTRATA = 20; // € — pod túto útratu upozornenia nedávame
+
+  function vlajkyCelku(nazov, spend, value, purchases, roas) {
+    const v = [];
+    if (spend >= MIN_UTRATA && !purchases)
+      v.push(`${nazov} minuli <strong>${SP.fmt.mena(spend)}</strong> bez jediného nákupu.`);
+    else if (spend >= MIN_UTRATA && value > 0 && roas < 1)
+      v.push(`${nazov} vrátili menej, než stáli — návratnosť je len <strong>${SP.fmt.roas(roas)}</strong>.`);
+    return v;
+  }
+  function vlajkyKampaniMeta(kampane) {
+    const v = [];
+    for (const k of kampane) {
+      if (k.spend >= MIN_UTRATA && !k.purchases)
+        v.push(`Kampaň „${k.name}“ minula <strong>${SP.fmt.mena(k.spend)}</strong> bez jediného nákupu.`);
+      else if (k.spend >= MIN_UTRATA && k.value > 0 && k.roas < 1)
+        v.push(`Kampaň „${k.name}“ má návratnosť len <strong>${SP.fmt.roas(k.roas)}</strong> — minula ${SP.fmt.mena(k.spend)}, priniesla ${SP.fmt.mena(k.value)}.`);
+    }
+    return v;
+  }
+  function kartaVlajok(vlajky) {
+    if (!vlajky.length) return null;
+    const karta = el("div", "karta vlajky");
+    karta.appendChild(el("div", "karta-hlavicka",
+      "<h2>Upozornenia</h2><span class='karta-pozn'>kde reklama míňa naprázdno</span>"));
+    const ul = el("ul", "zoznam-viet");
+    for (const v of vlajky) ul.appendChild(el("li", null, v));
+    karta.appendChild(ul);
+    return karta;
+  }
+
+  function kartaToku(riadky) {
+    if (!riadky.length) return null;
+    const karta = el("div", "karta");
+    karta.appendChild(el("div", "karta-hlavicka", "<h2>Kam išli peniaze</h2>"));
+    const ul = el("ul", "zoznam-viet");
+    for (const r of riadky) ul.appendChild(el("li", null, r));
+    karta.appendChild(ul);
+    return karta;
+  }
+  function tokPenaziMeta(a) {
+    const riadky = [];
+    const zarobila = [...a.kampane].sort((x, y) => y.value - x.value)[0];
+    const minula = [...a.kampane].sort((x, y) => y.spend - x.spend)[0];
+    if (zarobila && minula && zarobila.value > 0 && zarobila.name === minula.name) {
+      riadky.push(`Kampaň „<strong>${minula.name}</strong>“ bola najväčšou investíciou (${SP.fmt.mena(minula.spend)}) aj najlepším zárobkom — priniesla <strong>${SP.fmt.mena(minula.value)}</strong> (ROAS ${SP.fmt.roas(minula.roas)}).`);
+      return riadky;
+    }
+    if (zarobila && zarobila.value > 0)
+      riadky.push(`Najviac zarobila kampaň „<strong>${zarobila.name}</strong>“ — <strong>${SP.fmt.mena(zarobila.value)}</strong> pri investícii ${SP.fmt.mena(zarobila.spend)} (ROAS ${SP.fmt.roas(zarobila.roas)}).`);
+    if (minula && minula.spend > 0)
+      riadky.push(`Najviac minula kampaň „<strong>${minula.name}</strong>“ — <strong>${SP.fmt.mena(minula.spend)}</strong>, ${minula.value > 0 ? `priniesla ${SP.fmt.mena(minula.value)}` : "zatiaľ bez nákupov"}.`);
+    return riadky;
+  }
+  function tokPenaziGoogle(a) {
+    const riadky = [];
+    const zarobila = [...a.kampane].sort((x, y) => y.purchaseValue - x.purchaseValue)[0];
+    if (zarobila && zarobila.purchaseValue > 0)
+      riadky.push(`Najviac zarobila kampaň „<strong>${zarobila.name}</strong>“ — <strong>${SP.fmt.mena(zarobila.purchaseValue)}</strong> z ${SP.fmt.cislo(zarobila.purchases)} ${sklon(zarobila.purchases, "nákupu", "nákupov", "nákupov")}.`);
+    const typ = [...a.typy].sort((x, y) => y.cost - x.cost)[0];
+    if (typ && typ.cost > 0)
+      riadky.push(`Najväčšia časť investície išla do typu kampaní <strong>${SP.TYP_KAMPANE[typ.type] || typ.type}</strong> — <strong>${SP.fmt.mena(typ.cost)}</strong> (${SP.fmt.pct1(SP.div(typ.cost, a.cost) * 100)} z celku).`);
+    return riadky;
+  }
+  function pridaj(obsah, karta) { if (karta) obsah.appendChild(karta); }
+
   /* ══════════ stránka: Prehľad ══════════ */
   function renderPrehlad(obsah, mesiace, cmpMesiace) {
     const g = SP.agregujGoogle(mesiace);
@@ -454,6 +544,12 @@
     }
 
     if (!spolu.maDate) return prazdnyStav(obsah);
+
+    obsah.appendChild(kartaBilancie(spolu.spend, spolu.value));
+    pridaj(obsah, kartaVlajok([
+      ...(g.maDate ? vlajkyCelku("Google Ads reklamy", g.cost, g.purchaseValue, g.purchases, g.roas) : []),
+      ...(m.maDate ? vlajkyCelku("Meta Ads reklamy", m.spend, m.value, m.purchases, m.roas) : [])
+    ]));
 
     obsah.appendChild(kpiMriezka([
       ["Investícia do reklamy", "spend", SP.fmt.mena, "vydaj"],
@@ -555,6 +651,9 @@
     const cmp = cmpMesiace ? SP.agregujGoogle(cmpMesiace) : null;
     if (!a.maDate) return prazdnyStav(obsah);
 
+    obsah.appendChild(kartaBilancie(a.cost, a.purchaseValue));
+    pridaj(obsah, kartaVlajok(vlajkyCelku("Reklamy", a.cost, a.purchaseValue, a.purchases, a.roas)));
+
     obsah.appendChild(kpiMriezka([
       ["Investícia", "cost", SP.fmt.mena, "vydaj"],
       ["Hodnota nákupov", "purchaseValue", SP.fmt.mena, "prijem"],
@@ -628,6 +727,7 @@
     obsah.appendChild(mriezka);
 
     // kampane
+    pridaj(obsah, kartaToku(tokPenaziGoogle(a)));
     const kampKarta = el("div", "karta");
     kampKarta.appendChild(el("div", "karta-hlavicka",
       "<h2>Kampane</h2><span class='karta-pozn'>konverzie podľa kampaní</span>"));
@@ -659,6 +759,12 @@
     const a = SP.agregujMeta(mesiace);
     const cmp = cmpMesiace ? SP.agregujMeta(cmpMesiace) : null;
     if (!a.maDate) return prazdnyStav(obsah);
+
+    obsah.appendChild(kartaBilancie(a.spend, a.value));
+    pridaj(obsah, kartaVlajok([
+      ...vlajkyCelku("Reklamy", a.spend, a.value, a.purchases, a.roas),
+      ...vlajkyKampaniMeta(a.kampane)
+    ]));
 
     obsah.appendChild(kpiMriezka([
       ["Investícia", "spend", SP.fmt.mena, "vydaj"],
@@ -727,6 +833,7 @@
     obsah.appendChild(mriezka);
 
     // kampane
+    pridaj(obsah, kartaToku(tokPenaziMeta(a)));
     const kampKarta = el("div", "karta");
     kampKarta.appendChild(el("div", "karta-hlavicka", "<h2>Kampane</h2>"));
     kampKarta.appendChild(tabulka({
