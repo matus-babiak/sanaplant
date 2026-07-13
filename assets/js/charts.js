@@ -44,6 +44,8 @@ SP.tooltip = {
   },
   skry() { if (this.el) this.el.hidden = true; }
 };
+/* pri posúvaní (najmä na dotykových zariadeniach) tooltip skryjeme */
+window.addEventListener("scroll", () => SP.tooltip.skry(), { passive: true, capture: true });
 
 /* ── stĺpcový graf trendu ───────────────────────────────────
    polozky: [{ label, tooltipLabel, hodnoty: [{ nazov, farba, value|null }] }]
@@ -123,10 +125,13 @@ SP.stlpcovyGraf = function (el, polozky, opts = {}) {
       r.setAttribute("rx", Math.min(4, sirkaStlpca / 3));
       r.setAttribute("fill", h.farba);
       r.setAttribute("class", "stlpec");
-      r.addEventListener("mousemove", ev => {
+      const ukazTooltip = ev => {
         SP.tooltip.ukaz(`<strong>${p.tooltipLabel || p.label}</strong>${h.nazov ? h.nazov + ": " : ""}${fmt(h.value)}`, ev.clientX, ev.clientY);
-      });
-      r.addEventListener("mouseleave", () => SP.tooltip.skry());
+      };
+      r.addEventListener("pointerdown", ukazTooltip);
+      r.addEventListener("pointermove", ukazTooltip);
+      r.addEventListener("pointerleave", () => SP.tooltip.skry());
+      r.addEventListener("pointercancel", () => SP.tooltip.skry());
       svg.appendChild(r);
     });
 
@@ -177,9 +182,12 @@ SP.donut = function (el, casti, opts = {}) {
       `M ${x1} ${y1} A ${R} ${R} 0 ${velky} 1 ${x2} ${y2} L ${x3} ${y3} A ${r} ${r} 0 ${velky} 0 ${x4} ${y4} Z`);
     path.setAttribute("fill", c.farba);
     path.setAttribute("class", "stlpec");
-    path.addEventListener("mousemove", ev =>
-      SP.tooltip.ukaz(`<strong>${c.label}</strong>${fmt(c.value)} · ${SP.fmt.pct1(podiel * 100)}`, ev.clientX, ev.clientY));
-    path.addEventListener("mouseleave", () => SP.tooltip.skry());
+    const ukazTooltip = ev =>
+      SP.tooltip.ukaz(`<strong>${c.label}</strong>${fmt(c.value)} · ${SP.fmt.pct1(podiel * 100)}`, ev.clientX, ev.clientY);
+    path.addEventListener("pointerdown", ukazTooltip);
+    path.addEventListener("pointermove", ukazTooltip);
+    path.addEventListener("pointerleave", () => SP.tooltip.skry());
+    path.addEventListener("pointercancel", () => SP.tooltip.skry());
     svg.appendChild(path);
     uhol = koniec;
   }
