@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanaplant · Reporting</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23009137' d='M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12Zm0 18a6 6 0 0 1-6-6c0-2.8 2-6 6-9.4 4 3.4 6 6.6 6 9.4a6 6 0 0 1-6 6Z'/%3E%3Cpath fill='%23AAC805' d='M12 6.5c3 2.7 4.5 5 4.5 7.5A4.5 4.5 0 0 1 12 18.5Z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ══════════ Prihlásenie ══════════ -->
+<div id="auth" class="auth" hidden>
+  <div class="auth-box">
+    <div class="auth-logo">
+      <span class="logo-znacka" aria-hidden="true"></span>
+      <span class="logo-text">Sanaplant<em>reporting</em></span>
+    </div>
+    <p class="auth-hint">Prístup k reportom je chránený. Zadajte heslo.</p>
+    <form id="auth-form">
+      <input type="password" id="auth-heslo" placeholder="Heslo" autocomplete="current-password" autofocus>
+      <button type="submit" class="btn btn-primar">Vstúpiť</button>
+    </form>
+    <p id="auth-chyba" class="auth-chyba" hidden>Nesprávne heslo, skúste znova.</p>
+  </div>
+</div>
+
+<!-- ══════════ Aplikácia ══════════ -->
+<div id="app" class="app" hidden>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="logo-znacka" aria-hidden="true"></span>
+      <span class="logo-text">Sanaplant<em>reporting</em></span>
+    </div>
+
+    <nav class="sidebar-nav" id="nav">
+      <a href="#/prehlad" data-page="prehlad">
+        <svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6V11h-6v9Zm0-16v5h6V4h-6Z"/></svg>
+        Prehľad
+      </a>
+      <a href="#/google" data-page="google">
+        <svg viewBox="0 0 24 24"><path d="M12 11v2.9h6.9c-.3 1.8-2.1 5.2-6.9 5.2-4.1 0-7.5-3.4-7.5-7.6S7.9 3.9 12 3.9c2.4 0 4 1 4.9 1.9l2.3-2.2C17.7 2.2 15.1 1 12 1 5.9 1 1 5.9 1 12s4.9 11 11 11c6.3 0 10.6-4.5 10.6-10.8 0-.7-.1-1.2-.2-1.7H12Z"/></svg>
+        Google Ads
+      </a>
+      <a href="#/meta" data-page="meta">
+        <svg viewBox="0 0 24 24"><path d="M6.9 5C4 5 1.7 9 1.7 13.4c0 2.8 1.3 4.6 3.5 4.6 1.6 0 2.8-.8 4.9-4.4l1.4-2.4.5.8 1 1.8c2 3.4 3.3 4.2 5 4.2 2.2 0 3.4-1.8 3.4-4.7C21.4 8.9 19 5 16.2 5c-1.5 0-2.8.9-4.2 3-1.4-2.1-2.7-3-3.9-3h-1.2Zm9.2 2.6c1.6 0 3.2 2.9 3.2 6 0 1.5-.5 2.4-1.4 2.4-.9 0-1.4-.6-3.2-3.5l-.8-1.4c1.2-1.9 1.7-3.5 2.2-3.5Zm-9 0c.7 0 1.5.8 2.6 2.6l-1.2 2c-1.5 2.7-2.1 3.3-2.9 3.3-.8 0-1.3-.8-1.3-2.2 0-3 1.4-5.7 2.8-5.7Z"/></svg>
+        Meta Ads
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-info" id="info-data"></div>
+      <div class="sidebar-akcie">
+        <button id="btn-tema" class="btn-ikona" title="Prepnúť svetlý / tmavý režim">
+          <svg class="ik-mesiac" viewBox="0 0 24 24"><path d="M12.3 2a9.9 9.9 0 0 0-2.6.4 10 10 0 1 1-7.3 12A10 10 0 0 0 12.3 2Zm8.4 10.6A8 8 0 0 1 8.6 4.7a8 8 0 1 0 12.1 7.9Z"/></svg>
+          <svg class="ik-slnko" viewBox="0 0 24 24"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM3.5 4.9 4.9 3.5l2.1 2.1-1.4 1.4L3.5 4.9Zm13.5 13.5 1.4-1.4 2.1 2.1-1.4 1.4-2.1-2.1ZM19.1 3.5l1.4 1.4-2.1 2.1-1.4-1.4 2.1-2.1ZM5.6 17l1.4 1.4-2.1 2.1-1.4-1.4L5.6 17ZM23 11v2h-3v-2h3ZM4 11v2H1v-2h3Z"/></svg>
+        </button>
+        <button id="btn-odhlasit" class="btn-ikona" title="Odhlásiť sa">
+          <svg viewBox="0 0 24 24"><path d="M5 3h8a2 2 0 0 1 2 2v3h-2V5H5v14h8v-3h2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm12.2 5.3 1.4-1.4L23.3 12l-4.7 5.1-1.4-1.4 2.2-2.7H9v-2h10.4l-2.2-2.7Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="hlavna">
+    <header class="topbar">
+      <h1 id="titulok-stranky">Prehľad</h1>
+
+      <div class="filtre">
+        <div class="filter-skupina">
+          <label class="filter-label" for="f-preset">Obdobie</label>
+          <select id="f-preset" class="vstup">
+            <option value="latest">Posledný mesiac s dátami</option>
+            <option value="thisMonth">Tento mesiac</option>
+            <option value="lastMonth">Minulý mesiac</option>
+            <option value="thisYear">Tento rok</option>
+            <option value="lastYear">Minulý rok</option>
+            <option value="all">Celé obdobie</option>
+            <option value="custom">Vlastné…</option>
+          </select>
+        </div>
+
+        <div class="filter-skupina filter-vlastne" id="f-vlastne" hidden>
+          <label class="filter-label">Od – do</label>
+          <div class="filter-mesiace">
+            <input type="month" id="f-od" class="vstup">
+            <span class="filter-pomlcka">–</span>
+            <input type="month" id="f-do" class="vstup">
+          </div>
+        </div>
+
+        <div class="filter-skupina">
+          <label class="filter-label" for="f-porovnanie">Porovnať s</label>
+          <select id="f-porovnanie" class="vstup">
+            <option value="previous">Predošlé obdobie</option>
+            <option value="yoy">Rovnaké obdobie vlani</option>
+            <option value="none">Bez porovnania</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="obdobie-lista" id="obdobie-lista"></div>
+
+    <div id="obsah" class="obsah"></div>
+  </main>
+</div>
+
+<div id="nacitavanie" class="nacitavanie" hidden>
+  <div class="spinner"></div>
+  <p>Načítavam reporty…</p>
+</div>
+
+<div id="tooltip" class="tooltip" hidden></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/csv.js"></script>
+<script src="assets/js/parsers.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

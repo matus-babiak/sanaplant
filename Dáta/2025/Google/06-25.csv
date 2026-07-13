@@ -1,0 +1,41 @@
+Campaign report
+1 June 2025 - 30 June 2025
+Conversion action,Campaign status,Campaign,Budget,Budget name,Budget type,Currency code,Status,Status reasons,Campaign type,Impr.,Interactions,Interaction rate,Avg. cost,Cost,Clicks,CTR,Avg. CPM,Avg. CPC,Bid strategy type,Conv. rate,Conv. value,Conv. value / cost,Conversions,Cost / conv.
+add_to_cart,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,0.00,0,0.00,0
+purchase,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,"2,255.58",0,10.00,0
+Sanaplant.sk (web) view_item,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,0.00,0,0.00,0
+[830b] Google for WooCommerce purchase action,Paused,SE_brand,2.00, --,Daily,EUR,Paused,campaign paused,Search,0,0, --,0,0,0, --,0,0,Target CPA, --,"1,230.46",0,4.00,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"3,486.04",0,14.00,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+[830b] Google for WooCommerce purchase action,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+Sanaplant.sk (web) add_to_cart,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+[830b] Google for WooCommerce purchase action,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"1,230.46",0,4.00,0
+Sanaplant.sk (web) add_to_cart,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"2,255.58",0,10.00,0
+,Total: Account,,,,,EUR,,,,75,32,42.67%,0.27,8.48,32,42.67%,113.07,0.27,,43.75%,"3,486.04",411.09,14.00,0.61
+add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+[830b] Google for WooCommerce purchase action,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"1,230.46",0,4.00,0
+Sanaplant.sk (web) add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"2,255.58",0,10.00,0
+Sanaplant.sk (web) purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+,Total: Search,,,,,EUR,,,Search,75,32,42.67%,0.27,8.48,32,42.67%,113.07,0.27,,43.75%,"3,486.04",411.09,14.00,0.61
+,Total: Display,,,,,EUR,,,Display,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Performance Max,,,,,EUR,,,Performance Max,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Demand Gen,,,,,EUR,,,Demand Gen,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Smart,,,,,EUR,,,Smart,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: In-stream video,,,,,EUR,,,In-stream video,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Shopping,,,,,EUR,,,Shopping,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+[830b] Google for WooCommerce purchase action,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,"1,230.46",0,4.00,0
+obchod_kategoria_produkt,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,"2,255.58",0,10.00,0
+add_to_cart,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Display,,,,,,,,Display,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0

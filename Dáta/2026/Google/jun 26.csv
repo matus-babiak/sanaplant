@@ -1,0 +1,73 @@
+Campaign report
+1 June 2026 - 30 June 2026
+Conversion action,Campaign status,Campaign,Budget,Budget name,Budget type,Currency code,Status,Status reasons,Campaign type,Impr.,Interactions,Interaction rate,Avg. cost,Cost,Clicks,CTR,Avg. CPM,Avg. CPC,Bid strategy type,Conv. rate,Conv. value,Conv. value / cost,Conversions,Cost / conv.
+add_to_cart,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,6.29,0
+purchase,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,333.39,0,3.25,0
+Sanaplant.sk (web) purchase,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+begin_checkout,Paused,PMax - obilniny,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,3.22,0
+add_to_cart,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,2.84,0
+purchase,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,20.90,0,0.33,0
+Sanaplant.sk (web) purchase,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,0.00,0
+begin_checkout,Paused,PMax - listové hnojivá,7.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversions, --,0.00,0,1.83,0
+add_to_cart,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,21.81,0
+purchase,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,341.97,0,5.08,0
+Sanaplant.sk (web) purchase,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+begin_checkout,Paused,PMax - zlaté žltnutie viniča,10.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,11.31,0
+add_to_cart,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,31.87,0
+purchase,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,"1,434.09",0,15.70,0
+Sanaplant.sk (web) purchase,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,0.00,0
+begin_checkout,Paused,PMax - kukurica,8.00, --,Daily,EUR,Paused,campaign paused; most asset groups limited by policy; Products are excluded,Performance Max,0,0, --,0,0,0, --,0,0,Maximise Conversion Value, --,0.00,0,22.39,0
+add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,174.52,0
+purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"6,386.96",0,61.60,0
+Sanaplant.sk (web) purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+begin_checkout,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,85.24,0
+add_to_cart_frigomax,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"8,517.31",0,447.28,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+purchase,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,237.32,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,123.99,0
+purchase,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"8,517.31",0,85.97,0
+,Total: Account,,,,,EUR,,,,"365,724","17,501",4.79%,0.08,1407.19,"7,804",2.13%,3.85,0.18,,2.56%,"8,517.31",6.05,447.28,3.15
+Sanaplant.sk (web) add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,123.99,0
+obchod_kategoria_produkt,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,237.32,0
+Sanaplant.sk (web) view_item,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"8,517.31",0,85.97,0
+add_to_cart_frigomax,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+,Total: Smart,,,,,EUR,,,Smart,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: In-stream video,,,,,EUR,,,In-stream video,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Search,,,,,EUR,,,Search,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Performance Max,,,,,EUR,,,Performance Max,"365,724","17,501",4.79%,0.08,1407.19,"7,804",2.13%,3.85,0.18,,2.56%,"8,517.31",6.05,447.28,3.15
+,Total: Shopping,,,,,EUR,,,Shopping,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Display,,,,,EUR,,,Display,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Demand Gen,,,,,EUR,,,Demand Gen,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+Sanaplant.sk (web) view_item,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"8,517.31",0,85.97,0
+Sanaplant.sk (web) purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,123.99,0
+add_to_cart_frigomax,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,237.32,0
+obchod_kategoria_produkt,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0

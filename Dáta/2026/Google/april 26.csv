@@ -1,0 +1,70 @@
+Campaign report
+1 April 2026 - 30 April 2026
+Conversion action,Campaign status,Campaign,Budget,Budget name,Budget type,Currency code,Status,Status reasons,Campaign type,Impr.,Interactions,Interaction rate,Avg. cost,Cost,Clicks,CTR,Avg. CPM,Avg. CPC,Bid strategy type,Conv. rate,Conv. value,Conv. value / cost,Conversions,Cost / conv.
+add_to_cart,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+add_to_cart_book,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+purchase,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+purchase_book,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+begin_checkout,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,30.44,0
+begin_checkout_book,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+purchase_frigomax,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,518.89,0,13.00,0
+add_to_cart_frigomax,Paused,PMax - Frigomax,13.00, --,Daily,EUR,Paused,campaign paused,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,59.12,0
+add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,319.32,0
+purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"7,003.08",0,89.00,0
+Sanaplant.sk (web) purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+begin_checkout,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,150.56,0
+purchase_frigomax,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+add_to_cart_frigomax,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"7,521.97",0,661.44,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart_frigomax,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+purchase,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+purchase_frigomax,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,319.32,0
+add_to_cart_frigomax,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,59.12,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,181.00,0
+purchase,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"7,003.08",0,89.00,0
+purchase_frigomax,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,518.89,0,13.00,0
+,Total: Account,,,,,EUR,,,,"246,997","14,749",5.97%,0.05,801.88,"7,552",3.06%,3.25,0.11,,4.48%,"7,521.97",9.38,661.44,1.21
+purchase_frigomax,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,518.89,0,13.00,0
+Sanaplant.sk (web) view_item,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"7,003.08",0,89.00,0
+purchase_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_frigomax,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,59.12,0
+add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,319.32,0
+obchod_kategoria_produkt,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,181.00,0
+begin_checkout_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+,Total: Search,,,,,EUR,,,Search,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Display,,,,,EUR,,,Display,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Performance Max,,,,,EUR,,,Performance Max,"246,997","14,749",5.97%,0.05,801.88,"7,552",3.06%,3.25,0.11,,4.48%,"7,521.97",9.38,661.44,1.21
+,Total: Demand Gen,,,,,EUR,,,Demand Gen,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Smart,,,,,EUR,,,Smart,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: In-stream video,,,,,EUR,,,In-stream video,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Shopping,,,,,EUR,,,Shopping,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+add_to_cart_frigomax,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,59.12,0
+purchase_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,181.00,0
+Sanaplant.sk (web) view_item,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,319.32,0
+obchod_kategoria_produkt,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase_frigomax,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,518.89,0,13.00,0
+purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"7,003.08",0,89.00,0

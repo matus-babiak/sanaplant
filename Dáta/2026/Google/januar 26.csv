@@ -1,0 +1,45 @@
+Campaign report
+1 January 2026 - 31 January 2026
+Conversion action,Campaign status,Campaign,Budget,Budget name,Budget type,Currency code,Status,Status reasons,Campaign type,Impr.,Interactions,Interaction rate,Avg. cost,Cost,Clicks,CTR,Avg. CPM,Avg. CPC,Bid strategy type,Conv. rate,Conv. value,Conv. value / cost,Conversions,Cost / conv.
+add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,57.01,0
+add_to_cart_book,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,858.18,0,9.01,0
+Sanaplant.sk (web) purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+begin_checkout,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,27.03,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,858.18,0,93.04,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+purchase,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+add_to_cart,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,57.01,0
+begin_checkout,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0.00,0,27.03,0
+purchase,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,858.18,0,9.01,0
+,Total: Account,,,,,EUR,,,,"60,228","1,729",2.87%,0.10,170.53,"1,486",2.47%,2.83,0.11,,5.38%,858.18,5.03,93.04,1.83
+Sanaplant.sk (web) view_item,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,858.18,0,9.01,0
+add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,57.01,0
+obchod_kategoria_produkt,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+begin_checkout,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,27.03,0
+,Total: Display,,,,,EUR,,,Display,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Demand Gen,,,,,EUR,,,Demand Gen,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Smart,,,,,EUR,,,Smart,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Search,,,,,EUR,,,Search,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Performance Max,,,,,EUR,,,Performance Max,"60,228","1,729",2.87%,0.10,170.53,"1,486",2.47%,2.83,0.11,,5.38%,858.18,5.03,93.04,1.83
+,Total: Shopping,,,,,EUR,,,Shopping,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: In-stream video,,,,,EUR,,,In-stream video,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,858.18,0,9.01,0
+begin_checkout,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,27.03,0
+add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,57.01,0
+Sanaplant.sk (web) view_item,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0

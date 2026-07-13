@@ -1,0 +1,52 @@
+Campaign report
+1 July 2025 - 31 July 2025
+Conversion action,Campaign status,Campaign,Budget,Budget name,Budget type,Currency code,Status,Status reasons,Campaign type,Impr.,Interactions,Interaction rate,Avg. cost,Cost,Clicks,CTR,Avg. CPM,Avg. CPC,Bid strategy type,Conv. rate,Conv. value,Conv. value / cost,Conversions,Cost / conv.
+add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+add_to_cart_book,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"1,518.92",0,30.01,0
+purchase_book,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) purchase,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"3,554.71",0,52.17,0
+obchod_kategoria_produkt,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"24,054.40",0,9.00,0
+Sanaplant.sk (web) view_item,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,0.00,0,0.00,0
+[830b] Google for WooCommerce purchase action,Enabled,PMax_sales_products,40.00, --,Daily,EUR,Eligible (Limited),limited by budget; Products are disapproved,Performance Max,0,0, --,0,0,0, --,0,0,Target ROAS, --,"3,128.15",0,21.02,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"32,256.18",0,112.20,0
+ --,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+[830b] Google for WooCommerce purchase action,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+purchase,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+Sanaplant.sk (web) add_to_cart,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+Sanaplant.sk (web) purchase,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+ --,Total: Filtered campaigns, --, --, --, --, --, --,, --,0,0, --,0,0,0, --,0,0, --, --,0,0,0,0
+[830b] Google for WooCommerce purchase action,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"3,128.15",0,21.02,0
+purchase,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"1,518.92",0,30.01,0
+Sanaplant.sk (web) add_to_cart,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"24,054.40",0,9.00,0
+Sanaplant.sk (web) purchase,Total: Filtered campaigns, --, --, --, --,EUR, --,, --,0,0, --,0,0,0, --,0,0, --, --,"3,554.71",0,52.17,0
+,Total: Account,,,,,EUR,,,,"105,255","3,516",3.34%,0.10,359.34,"2,745",2.61%,3.41,0.13,,3.19%,"32,256.18",89.77,112.20,3.20
+add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"24,054.40",0,9.00,0
+Sanaplant.sk (web) purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"3,554.71",0,52.17,0
+add_to_cart_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+[830b] Google for WooCommerce purchase action,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"3,128.15",0,21.02,0
+purchase_book,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase,Total: Account,,,,,,,,,0,0, --,0,0,0, --,0,0,, --,"1,518.92",0,30.01,0
+,Total: Smart,,,,,EUR,,,Smart,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: In-stream video,,,,,EUR,,,In-stream video,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Search,,,,,EUR,,,Search,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Performance Max,,,,,EUR,,,Performance Max,"105,255","3,516",3.34%,0.10,359.34,"2,745",2.61%,3.41,0.13,,3.19%,"32,256.18",89.77,112.20,3.20
+,Total: Shopping,,,,,EUR,,,Shopping,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Display,,,,,EUR,,,Display,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+,Total: Demand Gen,,,,,EUR,,,Demand Gen,0,0, --,0,0.00,0, --,0,0,,0.00%,0.00,0.00,0.00,0.00
+Sanaplant.sk (web) purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"3,554.71",0,52.17,0
+purchase,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"1,518.92",0,30.01,0
+Sanaplant.sk (web) add_to_cart,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Search,,,,,,,,Search,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+purchase_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+obchod_kategoria_produkt,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+add_to_cart_book,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"24,054.40",0,9.00,0
+[830b] Google for WooCommerce purchase action,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,"3,128.15",0,21.02,0
+add_to_cart,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
+Sanaplant.sk (web) view_item,Total: Performance Max,,,,,,,,Performance Max,0,0, --,0,0,0, --,0,0,, --,0.00,0,0.00,0
