@@ -257,8 +257,9 @@ input[type="month"].vstup { color-scheme: light; }
 }
 .kpi-label { font-size: var(--text-sm); font-weight: 550; color: var(--text-tlmeny); }
 .kpi-hodnota { font-size: var(--nadpis-xl); font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-.kpi-hodnota.vydaj { color: var(--negativ); }
-.kpi-hodnota.prijem { color: var(--pozitiv); }
+/* výdaj (investícia) červenou, príjem (tržba) zelenou — všade */
+.vydaj { color: var(--negativ); }
+.prijem { color: var(--pozitiv); }
 .kpi-sekundarne .kpi-hodnota { font-size: var(--nadpis-md); }
 .kpi-delta { display: inline-flex; align-items: center; gap: 4px; font-size: var(--text-sm); font-weight: 600; }
 .kpi-delta .sipka { font-size: 0.7em; }

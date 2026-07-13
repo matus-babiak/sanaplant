@@ -182,6 +182,7 @@
         const tr = el("tr");
         for (const s of stlpce) {
           const td = el("td", s.text ? "bunka-text" : "");
+          if (s.trieda) td.classList.add(s.trieda);
           const v = r[s.k];
           td.innerHTML = s.render ? s.render(v, r) : (s.fmt ? s.fmt(v) : v);
           if (s.title) td.title = s.title(v, r);
@@ -196,6 +197,7 @@
         const tr = el("tr");
         stlpce.forEach((s, i) => {
           const td = el("td", s.text ? "bunka-text" : "");
+          if (s.trieda) td.classList.add(s.trieda);
           if (i === 0) td.textContent = "Spolu";
           else if (sucet[s.k] != null) td.innerHTML = s.fmt ? s.fmt(sucet[s.k]) : sucet[s.k];
           tr.appendChild(td);
@@ -495,8 +497,8 @@
     const porovKarta = el("div", "karta");
     porovKarta.appendChild(el("div", "karta-hlavicka", "<h2>Platformy vedľa seba</h2>"));
     const riadkyMetrik = [
-      ["Investícia", x => SP.fmt.mena(x.spend)],
-      ["Obrat z reklám", x => SP.fmt.mena(x.value)],
+      ["Investícia", x => SP.fmt.mena(x.spend), "vydaj"],
+      ["Obrat z reklám", x => SP.fmt.mena(x.value), "prijem"],
       ["ROAS", x => SP.fmt.roas(x.roas)],
       ["Nákupy", x => SP.fmt.cislo(x.purchases)],
       ["Cena za nákup", x => x.purchases ? SP.fmt.mena(x.cpa) : "—"],
@@ -515,12 +517,12 @@
     const t = el("table", "tabulka");
     t.innerHTML = `<thead><tr><th style="cursor:default">Metrika</th><th style="cursor:default">Google Ads</th><th style="cursor:default">Meta Ads</th><th style="cursor:default">Spolu</th></tr></thead>`;
     const tb = el("tbody");
-    for (const [nazov, fmt] of riadkyMetrik) {
+    for (const [nazov, fmt, trieda] of riadkyMetrik) {
       const tr = el("tr");
       tr.appendChild(el("td", "bunka-text", nazov));
-      tr.appendChild(el("td", null, g.maDate ? fmt(gN) : "—"));
-      tr.appendChild(el("td", null, m.maDate ? fmt(mN) : "—"));
-      tr.appendChild(el("td", null, `<strong>${fmt(sN)}</strong>`));
+      tr.appendChild(el("td", trieda, g.maDate ? fmt(gN) : "—"));
+      tr.appendChild(el("td", trieda, m.maDate ? fmt(mN) : "—"));
+      tr.appendChild(el("td", trieda, `<strong>${fmt(sN)}</strong>`));
       tb.appendChild(tr);
     }
     t.appendChild(tb);
@@ -584,7 +586,7 @@
       { label: "Pridania do košíka", value: a.atc },
       { label: "Začatia pokladne", value: a.checkout },
       { label: "Nákupy", value: a.purchases, farba: SP.FARBY.oranz,
-        sub: a.purchases ? `hodnota ${SP.fmt.mena(a.purchaseValue)}` : "" }
+        sub: a.purchases ? `hodnota <span class="prijem">${SP.fmt.mena(a.purchaseValue)}</span>` : "" }
     ]);
     mriezka.appendChild(lievikKarta);
 
@@ -593,7 +595,7 @@
     typyKarta.appendChild(tabulka({
       stlpce: [
         { k: "typ", label: "Typ kampane", text: true },
-        { k: "cost", label: "Investícia", fmt: SP.fmt.mena },
+        { k: "cost", label: "Investícia", fmt: SP.fmt.mena, trieda: "vydaj" },
         { k: "impressions", label: "Impresie", fmt: SP.fmt.cislo },
         { k: "clicks", label: "Kliknutia", fmt: SP.fmt.cislo },
         { k: "ctr", label: "CTR", fmt: SP.fmt.pct },
@@ -620,7 +622,7 @@
         { k: "typ", label: "Typ", text: true },
         { k: "bid", label: "Stratégia ponúk", text: true },
         { k: "purchases", label: "Nákupy", fmt: SP.fmt.cislo },
-        { k: "purchaseValue", label: "Hodnota nákupov", fmt: SP.fmt.mena },
+        { k: "purchaseValue", label: "Hodnota nákupov", fmt: SP.fmt.mena, trieda: "prijem" },
         { k: "atc", label: "Pridania do košíka", fmt: SP.fmt.cislo },
         { k: "checkout", label: "Začatia pokladne", fmt: SP.fmt.cislo }
       ],
@@ -688,9 +690,9 @@
       { label: "Pozretia stránky", value: a.lpv,
         sub: a.lpv ? `cena ${SP.fmt.mena(a.costLpv)}` : "" },
       { label: "Pridania do košíka", value: a.atc,
-        sub: a.atc ? `cena ${SP.fmt.mena(a.costAtc)} · hodnota ${SP.fmt.mena(a.atcValue)}` : "" },
+        sub: a.atc ? `cena ${SP.fmt.mena(a.costAtc)} · hodnota <span class="prijem">${SP.fmt.mena(a.atcValue)}</span>` : "" },
       { label: "Nákupy", value: a.purchases, farba: SP.FARBY.oranz,
-        sub: a.purchases ? `hodnota ${SP.fmt.mena(a.value)}` : "" }
+        sub: a.purchases ? `hodnota <span class="prijem">${SP.fmt.mena(a.value)}</span>` : "" }
     ]);
     lievikKarta.appendChild(el("p", "upozornenie",
       `Miera nákupov: ${SP.fmt.pct(a.rateClicks)} z kliknutí · ${SP.fmt.pct(a.rateLpv)} z pozretí stránky`));
@@ -715,8 +717,8 @@
       stlpce: [
         { k: "name", label: "Kampaň", text: true },
         { k: "pocetReklam", label: "Reklamy", fmt: SP.fmt.cislo },
-        { k: "spend", label: "Investícia", fmt: SP.fmt.mena },
-        { k: "value", label: "Hodnota nákupov", fmt: SP.fmt.mena },
+        { k: "spend", label: "Investícia", fmt: SP.fmt.mena, trieda: "vydaj" },
+        { k: "value", label: "Hodnota nákupov", fmt: SP.fmt.mena, trieda: "prijem" },
         { k: "roas", label: "ROAS", fmt: v => v ? SP.fmt.roas(v) : "—" },
         { k: "purchases", label: "Nákupy", fmt: SP.fmt.cislo },
         { k: "atc", label: "Košíky", fmt: SP.fmt.cislo },
@@ -757,8 +759,8 @@
             } },
           { k: "od", label: "Od", text: true, render: v => formatDatum(v) },
           { k: "do_", label: "Do", text: true, render: v => /^\d{4}/.test(v) ? formatDatum(v) : (v === "Prebieha" ? "prebieha" : (v || "—")) },
-          { k: "spend", label: "Investícia", fmt: SP.fmt.mena },
-          { k: "value", label: "Hodnota nákupov", fmt: v => v ? SP.fmt.mena(v) : "—" },
+          { k: "spend", label: "Investícia", fmt: SP.fmt.mena, trieda: "vydaj" },
+          { k: "value", label: "Hodnota nákupov", fmt: v => v ? SP.fmt.mena(v) : "—", trieda: "prijem" },
           { k: "roas", label: "ROAS", fmt: v => v ? SP.fmt.roas(v) : "—" },
           { k: "purchases", label: "Nákupy", fmt: v => v ? SP.fmt.cislo(v) : "—" },
           { k: "atc", label: "Košíky", fmt: v => v ? SP.fmt.cislo(v) : "—" },
