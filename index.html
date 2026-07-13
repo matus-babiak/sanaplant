@@ -72,6 +72,7 @@
           <label class="filter-label" for="f-preset">Obdobie</label>
           <select id="f-preset" class="vstup">
             <option value="latest">Posledný mesiac s dátami</option>
+            <option value="mesiac">Vybraný mesiac</option>
             <option value="thisMonth">Tento mesiac</option>
             <option value="lastMonth">Minulý mesiac</option>
             <option value="thisYear">Tento rok</option>
@@ -79,6 +80,19 @@
             <option value="all">Celé obdobie</option>
             <option value="custom">Vlastné…</option>
           </select>
+        </div>
+
+        <div class="filter-skupina filter-mesiac-vyber">
+          <label class="filter-label" for="f-mesiac">Mesiac</label>
+          <div class="filter-mesiace">
+            <button id="f-mes-prev" class="btn-ikona" title="Predošlý mesiac">
+              <svg viewBox="0 0 24 24"><path d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12l6.6-6.6Z"/></svg>
+            </button>
+            <input type="month" id="f-mesiac" class="vstup">
+            <button id="f-mes-next" class="btn-ikona" title="Nasledujúci mesiac">
+              <svg viewBox="0 0 24 24"><path d="M8.6 5.4 10 4l8 8-8 8-1.4-1.4 6.6-6.6-6.6-6.6Z"/></svg>
+            </button>
+          </div>
         </div>
 
         <div class="filter-skupina filter-vlastne" id="f-vlastne" hidden>
@@ -93,9 +107,9 @@
         <div class="filter-skupina">
           <label class="filter-label" for="f-porovnanie">Porovnať s</label>
           <select id="f-porovnanie" class="vstup">
-            <option value="previous">Predošlé obdobie</option>
-            <option value="yoy">Rovnaké obdobie vlani</option>
             <option value="none">Bez porovnania</option>
+            <option value="yoy">vs. minulý rok</option>
+            <option value="previous">vs. predošlé obdobie</option>
           </select>
         </div>
       </div>

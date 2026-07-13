@@ -9,7 +9,8 @@
     preset: "latest",
     od: null,          // "YYYY-MM"
     do: null,
-    porovnanie: "previous"   // previous | yoy | none
+    mesiac: null,      // "YYYY-MM" pre preset "mesiac"
+    porovnanie: "none"   // none | yoy | previous
   };
 
   const NAZVY_STRANOK = { prehlad: "Prehľad", google: "Google Ads", meta: "Meta Ads" };
@@ -57,6 +58,10 @@
     switch (stav.preset) {
       case "latest": {
         const m = najnovsiMesiac() || dnes;
+        return [m, m];
+      }
+      case "mesiac": {
+        const m = stav.mesiac || najnovsiMesiac() || dnes;
         return [m, m];
       }
       case "thisMonth": return [dnes, dnes];
@@ -807,30 +812,66 @@
   /* ══════════ filtre a navigácia ══════════ */
   function nastavFiltre() {
     const preset = $("#f-preset"), vlastne = $("#f-vlastne"),
-          od = $("#f-od"), doInp = $("#f-do"), porov = $("#f-porovnanie");
+          od = $("#f-od"), doInp = $("#f-do"), porov = $("#f-porovnanie"),
+          mesInp = $("#f-mesiac"), mesPrev = $("#f-mes-prev"), mesNext = $("#f-mes-next");
 
     const vsetky = SP.dostupneMesiace();
     if (vsetky.length) {
-      od.min = doInp.min = vsetky[0];
-      od.max = doInp.max = aktualnyMesiac();
+      od.min = doInp.min = mesInp.min = vsetky[0];
+      od.max = doInp.max = mesInp.max = aktualnyMesiac();
     }
     const posledny = najnovsiMesiac() || aktualnyMesiac();
-    stav.od = stav.do = posledny;
-    od.value = doInp.value = posledny;
+    stav.od = stav.do = stav.mesiac = posledny;
+    od.value = doInp.value = mesInp.value = posledny;
+
+    /* pole „Mesiac“ vždy ukazuje koniec zvoleného obdobia; šípky na hraniciach vypneme */
+    function synchronizujMesiac() {
+      const koniec = vypocitajRozsah()[1];
+      const min = vsetky[0] || null, max = aktualnyMesiac();
+      let m = koniec;
+      if (m > max) m = max;
+      if (min && m < min) m = min;
+      mesInp.value = m;
+      mesPrev.disabled = !!min && m <= min;
+      mesNext.disabled = m >= max;
+    }
+    function zvolMesiac(m) {
+      stav.preset = "mesiac";
+      stav.mesiac = m;
+      preset.value = "mesiac";
+      vlastne.hidden = true;
+      render();
+      synchronizujMesiac();
+    }
+    function posunMesiac(delta) {
+      const [zaciatok, koniec] = vypocitajRozsah();
+      let novy = SP.indexNaMesiac(SP.mesiacNaIndex(delta > 0 ? koniec : zaciatok) + delta);
+      const min = vsetky[0] || null, max = aktualnyMesiac();
+      if (min && novy < min) novy = min;
+      if (novy > max) novy = max;
+      zvolMesiac(novy);
+    }
+    mesPrev.addEventListener("click", () => posunMesiac(-1));
+    mesNext.addEventListener("click", () => posunMesiac(1));
+    mesInp.addEventListener("change", () => { if (mesInp.value) zvolMesiac(mesInp.value); });
 
     preset.addEventListener("change", () => {
       stav.preset = preset.value;
       vlastne.hidden = stav.preset !== "custom";
       if (stav.preset === "custom") { stav.od = od.value; stav.do = doInp.value; }
+      if (stav.preset === "mesiac") stav.mesiac = mesInp.value || posledny;
       render();
+      synchronizujMesiac();
     });
     od.addEventListener("change", () => {
-      if (od.value) { stav.od = od.value; if (stav.do < stav.od) { stav.do = stav.od; doInp.value = stav.od; } render(); }
+      if (od.value) { stav.od = od.value; if (stav.do < stav.od) { stav.do = stav.od; doInp.value = stav.od; } render(); synchronizujMesiac(); }
     });
     doInp.addEventListener("change", () => {
-      if (doInp.value) { stav.do = doInp.value; if (stav.do < stav.od) { stav.od = stav.do; od.value = stav.do; } render(); }
+      if (doInp.value) { stav.do = doInp.value; if (stav.do < stav.od) { stav.od = stav.do; od.value = stav.do; } render(); synchronizujMesiac(); }
     });
     porov.addEventListener("change", () => { stav.porovnanie = porov.value; render(); });
+
+    synchronizujMesiac();
   }
 
   function nastavNavigaciu() {

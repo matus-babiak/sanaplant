@@ -180,6 +180,8 @@ svg { fill: currentColor; }
 }
 .btn-ikona:hover { background: var(--plocha); color: var(--text); }
 .btn-ikona svg { width: 17px; height: 17px; }
+.btn-ikona:disabled { opacity: .35; cursor: default; }
+.btn-ikona:disabled:hover { background: none; color: var(--text-tlmeny); }
 .ik-slnko { display: none; }
 [data-theme="dark"] .ik-slnko { display: block; }
 [data-theme="dark"] .ik-mesiac { display: none; }
@@ -198,6 +200,7 @@ svg { fill: currentColor; }
 .filter-skupina { display: flex; flex-direction: column; gap: 3px; }
 .filter-label { font-size: var(--text-sm); color: var(--text-slaby); font-weight: 550; }
 .filter-mesiace { display: flex; align-items: center; gap: var(--m-xs); }
+.filter-mesiace .btn-ikona { flex: 0 0 36px; }
 .filter-pomlcka { color: var(--text-slaby); }
 
 .vstup {
@@ -417,7 +420,8 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   .topbar h1 { font-size: var(--nadpis-xl); }
   .filtre { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-sm); }
   .filter-skupina { min-width: 0; }
-  .filter-vlastne { grid-column: 1 / -1; }
+  .filter-mesiac-vyber { grid-column: 1 / -1; order: 2; }
+  .filter-vlastne { grid-column: 1 / -1; order: 3; }
   .vstup { width: 100%; min-width: 0; font-size: 1rem; } /* 16px – iOS pri fokuse nepriblíži stránku */
   .filter-mesiace .vstup { flex: 1; }
   .auth-box input { font-size: 1rem; }
