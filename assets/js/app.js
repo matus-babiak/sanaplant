@@ -327,11 +327,11 @@
   }
   function vetaZaklad(nazovReklam, o, mesiace) {
     if (o.value > 0) {
-      return `${obdobieUvod(mesiace)} sa do ${nazovReklam} investovalo ${SP.fmt.mena(o.spend)}. ` +
-        `Reklamy priniesli obrat ${SP.fmt.mena(o.value)} z ${SP.fmt.cislo(o.purchases)} ${sklon(o.purchases, "nákupu", "nákupov", "nákupov")}, ` +
-        `návratnosť investície dosiahla ${SP.fmt.roas(o.roas)}.`;
+      return `${obdobieUvod(mesiace)} sa do ${nazovReklam} investovalo <strong>${SP.fmt.mena(o.spend)}</strong>. ` +
+        `Reklamy priniesli obrat <strong>${SP.fmt.mena(o.value)}</strong> z ${SP.fmt.cislo(o.purchases)} ${sklon(o.purchases, "nákupu", "nákupov", "nákupov")}, ` +
+        `návratnosť investície dosiahla <strong>${SP.fmt.roas(o.roas)}</strong>.`;
     }
-    return `${obdobieUvod(mesiace)} sa do ${nazovReklam} investovalo ${SP.fmt.mena(o.spend)}. ` +
+    return `${obdobieUvod(mesiace)} sa do ${nazovReklam} investovalo <strong>${SP.fmt.mena(o.spend)}</strong>. ` +
       `Reklamy získali ${SP.fmt.cislo(o.impressions)} zobrazení a ${SP.fmt.cislo(o.clicks)} ${sklon(o.clicks, "kliknutie", "kliknutia", "kliknutí")}; ` +
       `nákupy v tomto období nezaznamenali.`;
   }
