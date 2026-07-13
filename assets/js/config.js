@@ -6,7 +6,7 @@ window.SP = window.SP || {};
 /* Heslo do aplikácie (SHA-256 hash).
    Zmena hesla: otvor konzolu prehliadača (F12) na stránke aplikácie,
    napíš  await spHash("NoveHeslo")  a výsledný kód vlož sem. */
-SP.HESLO_HASH = "480acb29644b5e9c59cd2fd94443b8d11c16fb3f9f7f043f9367be7c3cc6e772";
+SP.HESLO_HASH = "014605634d2287f0dbe6b379640a70e6c1068d6dbc353dd8c9d4c5398b8fcef9";
 
 /* Mapovanie názvov konverzných akcií Google Ads na 3 hlavné konverzie.
    Všetko, čo obsahuje "purchase" → nákup, "add_to_cart" → košík,
