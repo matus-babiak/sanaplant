@@ -878,12 +878,12 @@
         stlpce: [
           { k: "ad", label: "Reklama", text: true },
           { k: "campaign", label: "Kampaň", text: true, skryMobil: true },
-          { k: "status", label: "Stav", text: true, render: v => {
+          { k: "status", label: "Stav", text: true, skryMobil: true, render: v => {
               const s = SP.STAV_META[v] || { text: v || "—", trieda: "neaktivna" };
               return `<span class="stav-chip ${s.trieda}">${s.text}</span>`;
             } },
-          { k: "od", label: "Od", text: true, render: v => formatDatum(v) },
-          { k: "do_", label: "Do", text: true, render: v => /^\d{4}/.test(v) ? formatDatum(v) : (v === "Prebieha" ? "prebieha" : (v || "—")) },
+          { k: "od", label: "Od", text: true, skryMobil: true, render: v => formatDatum(v) },
+          { k: "do_", label: "Do", text: true, skryMobil: true, render: v => /^\d{4}/.test(v) ? formatDatum(v) : (v === "Prebieha" ? "prebieha" : (v || "—")) },
           { k: "spend", label: "Investícia", fmt: SP.fmt.mena, trieda: "vydaj" },
           { k: "value", label: "Hodnota nákupov", fmt: v => v ? SP.fmt.mena(v) : "—", trieda: "prijem" },
           { k: "roas", label: "ROAS", fmt: v => v ? SP.fmt.roas(v) : "—" },
