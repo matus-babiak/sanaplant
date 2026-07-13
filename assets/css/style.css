@@ -322,6 +322,9 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
 .tabulka tfoot td { font-weight: 700; border-bottom: none; border-top: 2px solid var(--ciara); }
 .tabulka .tlmene { color: var(--text-slaby); }
 
+/* riadok s názvom kampane pre mobil — na desktope skrytý */
+.m-nazov-riadok { display: none; }
+
 .stav-chip { display: inline-flex; align-items: center; gap: 6px; font-size: var(--text-sm); font-weight: 550; }
 .stav-chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--text-slaby); }
 .stav-chip.aktivna { color: var(--pozitiv); } .stav-chip.aktivna::before { background: var(--pozitiv); }
@@ -452,6 +455,32 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   }
   .tabulka tbody tr:hover td:first-child { background: var(--plocha); }
   .tabulka td.bunka-text { max-width: 42vw; }
+
+  /* tabuľky kampaní: názov kampane ako výrazný farebný riadok,
+     metriky pod ním sa rolujú vodorovne */
+  .tabulka .skry-mobil { display: none; }
+  .m-nazov-riadok { display: table-row; }
+  .tabulka td.m-nazov {
+    position: static;
+    max-width: none;
+    overflow: visible;
+    background: var(--primar);
+    color: #fff;
+    font-weight: 650;
+    text-align: left;
+    border-right: none;
+    border-bottom: none;
+    border-radius: var(--r-sm);
+    padding: var(--m-xs) var(--m-sm);
+  }
+  .tabulka td.m-nazov span {
+    position: sticky; left: 0;
+    display: inline-block;
+    max-width: calc(100vw - 4rem);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    vertical-align: bottom;
+  }
+  .tabulka tbody tr:hover td.m-nazov { background: var(--primar); }
 
   /* lievik: popis nad pruhom namiesto stĺpca vľavo */
   .lievik-krok { grid-template-columns: 1fr; gap: var(--m-xxs); }
