@@ -423,7 +423,6 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   .filtre { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-sm); }
   .filter-skupina { min-width: 0; }
   .filter-mesiac-vyber { grid-column: 1 / -1; order: 2; }
-  .filter-vlastne { grid-column: 1 / -1; order: 3; }
   .vstup { width: 100%; min-width: 0; font-size: 1rem; } /* 16px – iOS pri fokuse nepriblíži stránku */
   .filter-mesiace .vstup { flex: 1; }
   .auth-box input { font-size: 1rem; }

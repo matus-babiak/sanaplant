@@ -78,29 +78,22 @@
             <option value="thisYear">Tento rok</option>
             <option value="lastYear">Minulý rok</option>
             <option value="all">Celé obdobie</option>
-            <option value="custom">Vlastné…</option>
+            <option value="custom">Vlastný rozsah…</option>
           </select>
         </div>
 
         <div class="filter-skupina filter-mesiac-vyber">
-          <label class="filter-label" for="f-mesiac">Mesiac</label>
+          <label class="filter-label" for="f-od" id="f-mesiac-label">Mesiac</label>
           <div class="filter-mesiace">
             <button id="f-mes-prev" class="btn-ikona" title="Predošlý mesiac">
               <svg viewBox="0 0 24 24"><path d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12l6.6-6.6Z"/></svg>
             </button>
-            <input type="month" id="f-mesiac" class="vstup">
+            <input type="month" id="f-od" class="vstup">
+            <span class="filter-pomlcka" id="f-pomlcka" hidden>–</span>
+            <input type="month" id="f-do" class="vstup" hidden>
             <button id="f-mes-next" class="btn-ikona" title="Nasledujúci mesiac">
               <svg viewBox="0 0 24 24"><path d="M8.6 5.4 10 4l8 8-8 8-1.4-1.4 6.6-6.6-6.6-6.6Z"/></svg>
             </button>
-          </div>
-        </div>
-
-        <div class="filter-skupina filter-vlastne" id="f-vlastne" hidden>
-          <label class="filter-label">Od – do</label>
-          <div class="filter-mesiace">
-            <input type="month" id="f-od" class="vstup">
-            <span class="filter-pomlcka">–</span>
-            <input type="month" id="f-do" class="vstup">
           </div>
         </div>
 
