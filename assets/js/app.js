@@ -145,25 +145,36 @@
     return z;
   }
 
-  /* ══════════ tabuľka so zoraďovaním ══════════ */
-  function tabulka({ stlpce, riadky, sucet, uvodneZoradenie }) {
+  /* ══════════ tabuľka so zoraďovaním ══════════
+     mobilnyNazov: na mobile sa prvý stĺpec vykreslí ako samostatný
+     farebný riadok nad metrikami (na desktope sa nič nemení) */
+  function tabulka({ stlpce, riadky, sucet, uvodneZoradenie, mobilnyNazov }) {
     const obal = el("div", "tab-obal");
     const tab = el("table", "tabulka");
     let sortK = uvodneZoradenie || null, sortSmer = -1;
+
+    function nazovRiadok(text) {
+      const tr = el("tr", "m-nazov-riadok");
+      const td = el("td", "m-nazov", `<span>${text}</span>`);
+      td.colSpan = stlpce.length;
+      tr.appendChild(td);
+      return tr;
+    }
 
     function render() {
       tab.innerHTML = "";
       const thead = el("thead");
       const tr = el("tr");
-      for (const s of stlpce) {
+      stlpce.forEach((s, i) => {
         const th = el("th", sortK === s.k ? "zoradene" : "");
+        if (mobilnyNazov && i === 0) th.classList.add("skry-mobil");
         th.innerHTML = s.label + (sortK === s.k ? ` <span class="smer">${sortSmer < 0 ? "▼" : "▲"}</span>` : "");
         th.addEventListener("click", () => {
           if (sortK === s.k) sortSmer *= -1; else { sortK = s.k; sortSmer = s.text ? 1 : -1; }
           render();
         });
         tr.appendChild(th);
-      }
+      });
       thead.appendChild(tr);
       tab.appendChild(thead);
 
@@ -179,25 +190,29 @@
 
       const tbody = el("tbody");
       for (const r of data) {
+        if (mobilnyNazov) tbody.appendChild(nazovRiadok(r[stlpce[0].k]));
         const tr = el("tr");
-        for (const s of stlpce) {
+        stlpce.forEach((s, i) => {
           const td = el("td", s.text ? "bunka-text" : "");
           if (s.trieda) td.classList.add(s.trieda);
+          if (mobilnyNazov && i === 0) td.classList.add("skry-mobil");
           const v = r[s.k];
           td.innerHTML = s.render ? s.render(v, r) : (s.fmt ? s.fmt(v) : v);
           if (s.title) td.title = s.title(v, r);
           tr.appendChild(td);
-        }
+        });
         tbody.appendChild(tr);
       }
       tab.appendChild(tbody);
 
       if (sucet) {
         const tfoot = el("tfoot");
+        if (mobilnyNazov) tfoot.appendChild(nazovRiadok("Spolu"));
         const tr = el("tr");
         stlpce.forEach((s, i) => {
           const td = el("td", s.text ? "bunka-text" : "");
           if (s.trieda) td.classList.add(s.trieda);
+          if (mobilnyNazov && i === 0) td.classList.add("skry-mobil");
           if (i === 0) td.textContent = "Spolu";
           else if (sucet[s.k] != null) td.innerHTML = s.fmt ? s.fmt(sucet[s.k]) : sucet[s.k];
           tr.appendChild(td);
@@ -628,7 +643,8 @@
       ],
       riadky: a.kampane.map(k => ({ ...k, typ: SP.TYP_KAMPANE[k.type] || k.type })),
       sucet: { purchases: a.purchases, purchaseValue: a.purchaseValue, atc: a.atc, checkout: a.checkout },
-      uvodneZoradenie: "purchaseValue"
+      uvodneZoradenie: "purchaseValue",
+      mobilnyNazov: true
     }));
     kampKarta.appendChild(el("p", "upozornenie",
       "Export Google Ads obsahuje investíciu, impresie a kliknutia len za celý účet a typ kampane, preto tabuľka kampaní zobrazuje konverzné metriky."));
@@ -730,7 +746,8 @@
       riadky: a.kampane,
       sucet: { spend: a.spend, value: a.value, roas: a.roas, purchases: a.purchases,
                atc: a.atc, lpv: a.lpv, impressions: a.impressions, clicks: a.clicks, ctr: a.ctr },
-      uvodneZoradenie: "spend"
+      uvodneZoradenie: "spend",
+      mobilnyNazov: true
     }));
     obsah.appendChild(kampKarta);
 
