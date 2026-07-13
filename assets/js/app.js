@@ -108,10 +108,10 @@
       predtym: el("div", "kpi-porovnanie", `predtým ${fmt(prev)}`)
     };
   }
-  function kpiKarta(label, kluc, aktual, porovnanie, fmt) {
+  function kpiKarta(label, kluc, aktual, porovnanie, fmt, zvyraznenie) {
     const karta = el("div", "kpi");
     karta.appendChild(el("div", "kpi-label", label));
-    karta.appendChild(el("div", "kpi-hodnota", fmt(aktual[kluc])));
+    karta.appendChild(el("div", "kpi-hodnota" + (zvyraznenie ? " " + zvyraznenie : ""), fmt(aktual[kluc])));
     if (porovnanie) {
       const d = vytvorDelta(kluc, aktual, porovnanie, fmt);
       karta.appendChild(d.delta);
@@ -121,7 +121,7 @@
   }
   function kpiMriezka(defy, aktual, porovnanie, sekundarne) {
     const g = el("div", "kpi-mriezka" + (sekundarne ? " kpi-sekundarne" : ""));
-    for (const [label, kluc, fmt] of defy) g.appendChild(kpiKarta(label, kluc, aktual, porovnanie, fmt));
+    for (const [label, kluc, fmt, zvyraznenie] of defy) g.appendChild(kpiKarta(label, kluc, aktual, porovnanie, fmt, zvyraznenie));
     return g;
   }
   /* kompaktný zoznam štatistík (label vľavo, hodnota + zmena vpravo) */
@@ -439,8 +439,8 @@
     if (!spolu.maDate) return prazdnyStav(obsah);
 
     obsah.appendChild(kpiMriezka([
-      ["Investícia do reklamy", "spend", SP.fmt.mena],
-      ["Obrat z reklám", "value", SP.fmt.mena],
+      ["Investícia do reklamy", "spend", SP.fmt.mena, "vydaj"],
+      ["Obrat z reklám", "value", SP.fmt.mena, "prijem"],
       ["Návratnosť (ROAS)", "roas", SP.fmt.roas],
       ["Nákupy", "purchases", SP.fmt.cislo],
       ["Cena za nákup", "cpa", SP.fmt.mena]
@@ -539,8 +539,8 @@
     if (!a.maDate) return prazdnyStav(obsah);
 
     obsah.appendChild(kpiMriezka([
-      ["Investícia", "cost", SP.fmt.mena],
-      ["Hodnota nákupov", "purchaseValue", SP.fmt.mena],
+      ["Investícia", "cost", SP.fmt.mena, "vydaj"],
+      ["Hodnota nákupov", "purchaseValue", SP.fmt.mena, "prijem"],
       ["Návratnosť (ROAS)", "roas", SP.fmt.roas],
       ["Nákupy", "purchases", SP.fmt.cislo],
       ["Cena za nákup", "costPerPurchase", SP.fmt.mena]
@@ -643,8 +643,8 @@
     if (!a.maDate) return prazdnyStav(obsah);
 
     obsah.appendChild(kpiMriezka([
-      ["Investícia", "spend", SP.fmt.mena],
-      ["Hodnota nákupov", "value", SP.fmt.mena],
+      ["Investícia", "spend", SP.fmt.mena, "vydaj"],
+      ["Hodnota nákupov", "value", SP.fmt.mena, "prijem"],
       ["Návratnosť (ROAS)", "roas", SP.fmt.roas],
       ["Nákupy", "purchases", SP.fmt.cislo],
       ["Cena za nákup", "cpa", SP.fmt.mena]
