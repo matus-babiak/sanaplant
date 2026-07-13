@@ -422,9 +422,8 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   /* titulok a filtre pod sebou, ovládanie na celú šírku */
   .topbar { flex-direction: column; align-items: stretch; gap: var(--m-sm); }
   .topbar h1 { font-size: var(--nadpis-xl); }
-  .filtre { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-sm); }
+  .filtre { display: grid; grid-template-columns: 1fr; gap: var(--m-sm); }
   .filter-skupina { min-width: 0; }
-  .filter-mesiac-vyber { grid-column: 1 / -1; order: 2; }
   .vstup { width: 100%; min-width: 0; font-size: 1rem; } /* 16px – iOS pri fokuse nepriblíži stránku */
   .filter-mesiace .vstup { flex: 1; }
   .auth-box input { font-size: 1rem; }
