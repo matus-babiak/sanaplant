@@ -340,8 +340,8 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
 .komentar-mesiac p { color: var(--text); max-width: 70ch; }
 
 /* ── rôzne ──────────────────────────────────────────────── */
-.mriezka-2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--m-lg); align-items: start; }
-.mriezka-rovna { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-lg); align-items: start; }
+.mriezka-2 { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--m-lg); align-items: start; }
+.mriezka-rovna { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--m-lg); align-items: start; }
 
 .prazdny-stav { text-align: center; color: var(--text-slaby); padding: var(--m-xxl) var(--m-lg); }
 .prazdny-stav h2 { color: var(--text-tlmeny); margin-bottom: var(--m-xs); font-size: var(--nadpis-md); }
@@ -371,7 +371,7 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   padding: 6px 10px;
   font-size: var(--text-sm);
   box-shadow: var(--tien-md);
-  max-width: 260px;
+  max-width: min(260px, calc(100vw - 24px));
 }
 [data-theme="dark"] .tooltip { background: #000; }
 .tooltip strong { display: block; }
@@ -387,6 +387,74 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
   .sidebar-footer { margin: 0; padding: 0; border: none; flex-direction: row; align-items: center; }
   .sidebar-info { display: none; }
   .hlavna { padding: var(--m-md); }
-  .mriezka-2, .mriezka-rovna { grid-template-columns: 1fr; }
+  .mriezka-2, .mriezka-rovna { grid-template-columns: minmax(0, 1fr); }
   .lievik-krok { grid-template-columns: 130px 1fr; }
+}
+
+/* ── mobil ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* hlavička: značka + akcie v prvom riadku, navigácia pod nimi */
+  .sidebar { flex-wrap: wrap; row-gap: var(--m-xs); }
+  .sidebar-brand { flex: 1; min-width: 0; }
+  .sidebar-footer { order: 1; }
+  .sidebar-nav {
+    order: 2; flex: 1 1 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .sidebar-nav::-webkit-scrollbar { display: none; }
+  .sidebar-nav a {
+    flex: 1 0 auto; justify-content: center; white-space: nowrap;
+    padding: var(--m-xs); gap: var(--m-xs);
+    font-size: var(--text-sm);
+  }
+  .sidebar-nav a svg { width: 16px; height: 16px; flex: 0 0 16px; }
+
+  /* titulok a filtre pod sebou, ovládanie na celú šírku */
+  .topbar { flex-direction: column; align-items: stretch; gap: var(--m-sm); }
+  .topbar h1 { font-size: var(--nadpis-xl); }
+  .filtre { display: grid; grid-template-columns: 1fr 1fr; gap: var(--m-sm); }
+  .filter-skupina { min-width: 0; }
+  .filter-vlastne { grid-column: 1 / -1; }
+  .vstup { width: 100%; min-width: 0; font-size: 1rem; } /* 16px – iOS pri fokuse nepriblíži stránku */
+  .filter-mesiace .vstup { flex: 1; }
+  .auth-box input { font-size: 1rem; }
+
+  /* obsah a karty: menšie odstupy */
+  .hlavna { padding: var(--m-md) var(--m-sm) var(--m-xl); }
+  .obsah { gap: var(--m-md); }
+  .karta { padding: var(--m-md); }
+  .tab-obal { margin: 0 calc(-1 * var(--m-md)); padding: 0 var(--m-md); }
+  .karta-hlavicka .vstup { width: 100%; }
+
+  /* KPI karty: kompaktnejšie, hodnoty sa zmestia na polovicu displeja */
+  .kpi-mriezka, .kpi-mriezka.kpi-sekundarne { gap: var(--m-sm); }
+  .kpi { padding: var(--m-sm) var(--m-md); }
+  .kpi-hodnota { font-size: 1.25rem; }
+  .kpi-sekundarne .kpi-hodnota { font-size: var(--text-lg); }
+
+  /* tabuľky: prvý stĺpec zostáva prilepený pri vodorovnom posúvaní */
+  .tabulka th:first-child, .tabulka td:first-child {
+    position: sticky; left: 0; z-index: 2;
+    background: var(--karta);
+    max-width: 42vw;
+    overflow: hidden; text-overflow: ellipsis;
+    padding-right: var(--m-xs);
+    border-right: 1px solid var(--ciara);
+  }
+  .tabulka tbody tr:hover td:first-child { background: var(--plocha); }
+  .tabulka td.bunka-text { max-width: 42vw; }
+
+  /* lievik: popis nad pruhom namiesto stĺpca vľavo */
+  .lievik-krok { grid-template-columns: 1fr; gap: var(--m-xxs); }
+  .lievik-info {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    justify-content: space-between; column-gap: var(--m-xs);
+    text-align: left;
+  }
+  .lievik-sub { flex-basis: 100%; }
+  .lievik-pruh-obal { height: 30px; }
+  .lievik-pct { font-size: 0.7rem; right: 8px; }
 }
