@@ -477,8 +477,8 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
     position: static;
     max-width: none;
     overflow: visible;
-    background: var(--primar);
-    color: #fff;
+    background: var(--primar-jemny);
+    color: var(--primar);
     font-weight: 650;
     text-align: left;
     border-right: none;
@@ -493,7 +493,7 @@ table.tabulka { border-collapse: collapse; width: 100%; font-variant-numeric: ta
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     vertical-align: bottom;
   }
-  .tabulka tbody tr:hover td.m-nazov { background: var(--primar); }
+  .tabulka tbody tr:hover td.m-nazov { background: var(--primar-jemny); }
 
   /* bilancia: tri riadky pod sebou namiesto stĺpcov */
   .bilancia-mriezka { grid-template-columns: 1fr; gap: var(--m-xs); }

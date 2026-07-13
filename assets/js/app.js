@@ -894,7 +894,8 @@
           { k: "ctr", label: "CTR", fmt: SP.fmt.pct }
         ],
         riadky,
-        uvodneZoradenie: "spend"
+        uvodneZoradenie: "spend",
+        mobilnyNazov: true
       }));
     }
     filter.addEventListener("change", kresliReklamy);
